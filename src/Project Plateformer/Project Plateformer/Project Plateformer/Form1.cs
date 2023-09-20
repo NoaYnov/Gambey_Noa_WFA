@@ -16,5 +16,10 @@ namespace Project_Plateformer
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
