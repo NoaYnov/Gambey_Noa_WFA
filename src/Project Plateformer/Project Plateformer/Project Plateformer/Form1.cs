@@ -21,5 +21,20 @@ namespace Project_Plateformer
         {
 
         }
+
+        private void MainGameTimeEvent(object sender, EventArgs e)
+        {
+
+        }
+
+        private void keyIsDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void keyIsUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
