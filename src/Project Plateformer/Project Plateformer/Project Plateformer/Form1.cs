@@ -24,10 +24,11 @@ namespace Project_Plateformer
         int verticalSpeed = 3;
         int speed = 0;
 
-        int enemyOneSpeed = 5;
+        int enemyOneSpeed = 10;
         int enemyTwoSpeed = 3;
+        int alea = 0;
 
-        
+
 
 
 
@@ -103,11 +104,29 @@ namespace Project_Plateformer
                 }
 
             } 
+            mob1.Left -= enemyOneSpeed;
+            
+            if (mob1.Left < pictureBox1.Left || mob1.Left + mob1.Width > pictureBox1.Left + pictureBox2.Width)
+            {
+                alea++;
+                enemyOneSpeed = -enemyOneSpeed;
+                if (alea % 3 == 0)
+                {
+                    mob1.Top -= jumpSpeed;
+
+                }
+
+            }
             
 
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

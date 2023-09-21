@@ -107,9 +107,9 @@
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Player.Image = ((System.Drawing.Image)(resources.GetObject("Player.Image")));
-            this.Player.Location = new System.Drawing.Point(432, 171);
+            this.Player.Location = new System.Drawing.Point(47, 334);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(52, 58);
+            this.Player.Size = new System.Drawing.Size(34, 58);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player.TabIndex = 4;
             this.Player.TabStop = false;
@@ -156,7 +156,7 @@
             // 
             this.mob1.BackColor = System.Drawing.Color.Transparent;
             this.mob1.Image = ((System.Drawing.Image)(resources.GetObject("mob1.Image")));
-            this.mob1.Location = new System.Drawing.Point(490, 193);
+            this.mob1.Location = new System.Drawing.Point(491, 204);
             this.mob1.Name = "mob1";
             this.mob1.Size = new System.Drawing.Size(36, 36);
             this.mob1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -214,6 +214,7 @@
             this.Controls.Add(this.mob1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.Plateform)).EndInit();
