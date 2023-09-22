@@ -14,6 +14,7 @@ namespace Project_Plateformer
     public partial class Form1 : Form
     {
         bool goLeft, goRight, jumping, isGameOver;
+        
 
         int jumpSpeed;
         int force;
@@ -24,9 +25,8 @@ namespace Project_Plateformer
         int verticalSpeed = 3;
         int speed = 0;
 
-        int enemyOneSpeed = 10;
+        int mob1Speed = 5;
         int enemyTwoSpeed = 3;
-        int alea = 0;
 
 
 
@@ -36,6 +36,7 @@ namespace Project_Plateformer
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -55,10 +56,12 @@ namespace Project_Plateformer
             if (goLeft == true)
             {
                 Player.Left -= playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlcMirror;
             }
             if (goRight == true)
             {
                 Player.Left += playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlc;
             }
             if (jumping == true && force < 0)
             {
@@ -78,11 +81,23 @@ namespace Project_Plateformer
             {
                 if (x is PictureBox && x.Tag == "Plateform")
                 {
-                    if (Player.Bounds.IntersectsWith(x.Bounds) && !jumping)
+                    if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        force = 8;
-                        Player.Top = x.Top - Player.Height ;
+                        if (x.Bounds.Y <= Player.Bounds.Y)
+                        {
+                            Player.Top = x.Top + Player.Height;
+                        }
+                        else if (Player.Bounds.Y <= x.Bounds.Y + Player.Bounds.Height)
+                        {
+                            force = 8;
+                            Player.Top = x.Top - Player.Height;
+                        }
+                        
+
                     }
+                    
+                    
+                    
                     x.BringToFront();
                 }
                 if (x is PictureBox && x.Tag == "Coin")
@@ -104,20 +119,22 @@ namespace Project_Plateformer
                 }
 
             } 
-            mob1.Left -= enemyOneSpeed;
+            mob1.Left -= mob1Speed;
             
             if (mob1.Left < pictureBox1.Left || mob1.Left + mob1.Width > pictureBox1.Left + pictureBox2.Width)
             {
-                alea++;
-                enemyOneSpeed = -enemyOneSpeed;
-                if (alea % 3 == 0)
-                {
-                    mob1.Top -= jumpSpeed;
-
-                }
+                
+                mob1Speed = -mob1Speed;
+                
+                
 
             }
-            
+            if (Player.Location.Y >= 400)
+            {
+
+                this.VerticalScroll.Value = 500;
+            }
+
 
         }
 
@@ -128,8 +145,24 @@ namespace Project_Plateformer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // the screen scroll automatically when the player reach the bottom of the screen
+            
+
 
         }
+
+        private void Plateform_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void Player_Click(object sender, EventArgs e)
+        {
+            // erase the white background of the player
+            Player.BackColor = Color.Transparent;
+
+        }
+        
 
         private void keyIsDown(object sender, KeyEventArgs e)
         {
@@ -146,9 +179,26 @@ namespace Project_Plateformer
                 jumping = true;
                
             }
+            
 
 
         }
+        private void gravity()
+        {
+            //reverse the gravity
+            if (jumping == true)
+            {
+                jumpSpeed = 8;
+                force -= 1;
+            }
+            else
+            {
+                jumpSpeed = -10;
+            }
+        }
+
+
+
 
         private void keyIsUp(object sender, KeyEventArgs e)
         {
@@ -169,6 +219,11 @@ namespace Project_Plateformer
             {
                 restartGame();
             }
+            if (e.KeyCode == Keys.C)
+            {
+                gravity();
+            }
+
 
         }
         private void restartGame()
@@ -191,8 +246,8 @@ namespace Project_Plateformer
             Player.Left = 68;
             Player.Top = 334;
 
-            mob1.Left = 402;
-            mob1.Top = 263;
+            mob1.Left = 491;
+            mob1.Top = 204;
             gameTime.Start();
 
 

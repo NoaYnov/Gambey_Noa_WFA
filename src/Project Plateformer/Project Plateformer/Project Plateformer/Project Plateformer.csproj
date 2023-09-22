@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Plateform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Plateform %28Personnalisé%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\vlc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\vlcMirror.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
