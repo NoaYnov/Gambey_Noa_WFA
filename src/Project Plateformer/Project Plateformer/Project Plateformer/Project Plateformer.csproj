@@ -95,5 +95,8 @@
   <ItemGroup>
     <None Include="img\vlcMirror.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\end.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

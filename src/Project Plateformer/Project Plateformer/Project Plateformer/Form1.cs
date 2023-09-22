@@ -80,6 +80,7 @@ namespace Project_Plateformer
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Tag == "Plateform")
+
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds))
                     {
@@ -91,6 +92,15 @@ namespace Project_Plateformer
                         {
                             force = 8;
                             Player.Top = x.Top - Player.Height;
+                        }
+                        if (x.Name == "END")
+                        {
+                           if (Player.Bounds.IntersectsWith(x.Bounds))
+                            {
+                                gameTime.Stop();
+                                isGameOver = true;
+                                txtScore.Text = "Score: " + score + Environment.NewLine + "You have reached the end of your journey!!";
+                            }
                         }
                         
 
@@ -180,21 +190,9 @@ namespace Project_Plateformer
                
             }
             
+            
 
 
-        }
-        private void gravity()
-        {
-            //reverse the gravity
-            if (jumping == true)
-            {
-                jumpSpeed = 8;
-                force -= 1;
-            }
-            else
-            {
-                jumpSpeed = -10;
-            }
         }
 
 
@@ -219,10 +217,7 @@ namespace Project_Plateformer
             {
                 restartGame();
             }
-            if (e.KeyCode == Keys.C)
-            {
-                gravity();
-            }
+         
 
 
         }
