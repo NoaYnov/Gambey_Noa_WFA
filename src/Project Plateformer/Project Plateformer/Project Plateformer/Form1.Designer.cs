@@ -63,6 +63,7 @@
             // txtScore
             // 
             this.txtScore.AutoSize = true;
+            this.txtScore.BackColor = System.Drawing.Color.White;
             this.txtScore.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.Location = new System.Drawing.Point(653, 9);
             this.txtScore.Name = "txtScore";
@@ -235,8 +236,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::Project_Plateformer.Properties.Resources.cave;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1135, 640);
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox1);
@@ -248,9 +252,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Plateform);
-            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.mob1);
             this.Controls.Add(this.pictureBox10);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

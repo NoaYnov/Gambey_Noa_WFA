@@ -27,6 +27,7 @@ namespace Project_Plateformer
 
         int mob1Speed = 5;
         int enemyTwoSpeed = 3;
+        bool end = false;
 
 
 
@@ -95,12 +96,12 @@ namespace Project_Plateformer
                         }
                         if (x.Name == "END")
                         {
-                           if (Player.Bounds.IntersectsWith(x.Bounds))
-                            {
-                                gameTime.Stop();
-                                isGameOver = true;
-                                txtScore.Text = "Score: " + score + Environment.NewLine + "You have reached the end of your journey!!";
-                            }
+                        Console.WriteLine("END");
+                        gameTime.Stop();
+                        isGameOver = true;
+                        end = true;
+                        txtScore.Text = "Score: " + score + Environment.NewLine + "You have reached the end of your journey!!";
+                         
                         }
                         
 
@@ -144,7 +145,17 @@ namespace Project_Plateformer
 
                 this.VerticalScroll.Value = 500;
             }
-
+            // when the player move the background move too
+            if (goLeft == true && Player.Left > 400)
+            {
+                foreach (Control x in this.Controls)
+                {
+                    if (x is PictureBox && x.Tag == "Plateform" || x is PictureBox && x.Tag == "Coin" || x is PictureBox && x.Tag == "mob")
+                    {
+                        x.Left += playerSpeed;
+                    }
+                }
+            }
 
         }
 
@@ -169,7 +180,7 @@ namespace Project_Plateformer
         private void Player_Click(object sender, EventArgs e)
         {
             // erase the white background of the player
-            Player.BackColor = Color.Transparent;
+            
 
         }
         
@@ -229,7 +240,11 @@ namespace Project_Plateformer
             isGameOver = false;
             score = 0;
             txtScore.Text = "Score: " + score;
+            if (end == true)
+            {
+                // switch to the next level
 
+            }
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Visible == false)
@@ -239,10 +254,10 @@ namespace Project_Plateformer
             }
 
             Player.Left = 68;
-            Player.Top = 334;
+            Player.Top = 300;
 
-            mob1.Left = 491;
-            mob1.Top = 204;
+            mob1.Left = 400;
+            mob1.Top = 170;
             gameTime.Start();
 
 
