@@ -50,6 +50,7 @@ namespace Project_Plateformer
         {
             foreach (Control x in this.Controls)
             {
+                
                 if (x is PictureBox && (string)x.Tag == "Plateform")
 
                 {
@@ -64,6 +65,7 @@ namespace Project_Plateformer
                             force = 8;
                             Player.Top = x.Top - Player.Height;
                         }
+
                         if (x.Name == "END")
                         {
                             Console.WriteLine("END");
@@ -81,6 +83,39 @@ namespace Project_Plateformer
 
                     x.BringToFront();
                 }
+                if (x is PictureBox && (string)x.Tag == "Mur")
+                {
+                    if (Player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        //le  joueur se cogne contre le mur
+                        if (goLeft == true)
+                        {
+                            //si le joueur est au dessus le mur il peut marcher dessus
+                            
+                            Player.Left = x.Left + x.Width;
+                        }
+                        else if (goRight == true)
+                        {
+                            //si le joueur est au dessus le mur il peut marcher dessus
+                     
+                            Player.Left = x.Left - Player.Width;
+                        }
+                        else if (x.Bounds.Y <= Player.Bounds.Y)
+                        {
+                            Player.Top = x.Top + Player.Height;
+                        }
+                        else if (Player.Bounds.Y <= x.Bounds.Y + Player.Bounds.Height)
+                        {
+                            force = 8;
+                            Player.Top = x.Top - Player.Height;
+                        }
+
+
+
+
+                    }
+                }
+
                 if (x is PictureBox && x.Tag == "Coin")
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
@@ -102,25 +137,24 @@ namespace Project_Plateformer
         private void Music()
         {
             // import the music
-            SoundPlayer mus = new SoundPlayer(Properties.Resources.resu);
-            mus.PlayLooping();
             
+            if (music == false)
+            {
+                SoundPlayer mus = new SoundPlayer(Properties.Resources.resu);
+                mus.PlayLooping();
+                music = true;
+            }
         }
 
 
         private void MainGameTimeEvent(object sender, EventArgs e)
         {
-            // play the music in the background
             
             this.DoubleBuffered = true;
             txtScore.Text = "Score: " + score;
             Player.Top += jumpSpeed;
-
-            if (music == false)
-            {
-                Music();
-                music = true;
-            }
+            Music();
+            
 
             if (goLeft == true)
             {
@@ -215,6 +249,16 @@ namespace Project_Plateformer
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
         {
 
         }
