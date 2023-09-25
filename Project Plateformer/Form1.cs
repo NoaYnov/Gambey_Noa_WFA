@@ -39,6 +39,8 @@ namespace Project_Plateformer
         public Form1()
         {
             InitializeComponent();
+            Player.Top = 300;
+
 
         }
 

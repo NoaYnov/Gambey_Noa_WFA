@@ -49,11 +49,6 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,11 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -113,9 +103,9 @@
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImage = global::Project_Plateformer.Properties.Resources.vlc;
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Player.Location = new System.Drawing.Point(50, 323);
+            this.Player.Location = new System.Drawing.Point(55, 332);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(34, 58);
+            this.Player.Size = new System.Drawing.Size(34, 60);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player.TabIndex = 4;
             this.Player.TabStop = false;
@@ -136,9 +126,9 @@
             // 
             this.END.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.END.BackgroundImage = global::Project_Plateformer.Properties.Resources.Plateform__Personnalisé_;
-            this.END.Location = new System.Drawing.Point(-7, 945);
+            this.END.Location = new System.Drawing.Point(29, 945);
             this.END.Name = "END";
-            this.END.Size = new System.Drawing.Size(83, 33);
+            this.END.Size = new System.Drawing.Size(47, 33);
             this.END.TabIndex = 10;
             this.END.TabStop = false;
             this.END.Tag = "Plateform";
@@ -206,9 +196,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(196, 323);
+            this.pictureBox2.Location = new System.Drawing.Point(198, 311);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(183, 30);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "Plateform";
@@ -218,9 +208,9 @@
             // 
             this.Plateform.BackColor = System.Drawing.Color.Transparent;
             this.Plateform.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plateform.BackgroundImage")));
-            this.Plateform.Location = new System.Drawing.Point(-8, 398);
+            this.Plateform.Location = new System.Drawing.Point(29, 398);
             this.Plateform.Name = "Plateform";
-            this.Plateform.Size = new System.Drawing.Size(771, 32);
+            this.Plateform.Size = new System.Drawing.Size(734, 32);
             this.Plateform.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Plateform.TabIndex = 1;
             this.Plateform.TabStop = false;
@@ -269,7 +259,7 @@
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.Location = new System.Drawing.Point(-8, -14);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 413);
+            this.pictureBox11.Size = new System.Drawing.Size(36, 992);
             this.pictureBox11.TabIndex = 15;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Tag = "Mur";
@@ -296,62 +286,6 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "Plateform";
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
-            this.pictureBox13.Location = new System.Drawing.Point(-8, 297);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(36, 413);
-            this.pictureBox13.TabIndex = 18;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "Plateform";
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.BackgroundImage")));
-            this.pictureBox14.Location = new System.Drawing.Point(-7, 710);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(36, 237);
-            this.pictureBox14.TabIndex = 18;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Tag = "Mur";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox15.BackgroundImage")));
-            this.pictureBox15.Location = new System.Drawing.Point(149, 338);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(51, 15);
-            this.pictureBox15.TabIndex = 19;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Tag = "Mur";
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
-            this.pictureBox16.Location = new System.Drawing.Point(140, 323);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(19, 30);
-            this.pictureBox16.TabIndex = 20;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Tag = "Mur";
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
-            this.pictureBox17.Location = new System.Drawing.Point(155, 323);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(45, 21);
-            this.pictureBox17.TabIndex = 21;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Tag = "Plateform";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -360,14 +294,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Project_Plateformer.Properties.Resources.cave;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1135, 469);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox16);
+            this.ClientSize = new System.Drawing.Size(1135, 768);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
@@ -408,11 +337,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,11 +363,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }
 
