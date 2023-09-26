@@ -22,24 +22,23 @@ namespace Project_Plateformer
         int score = 0;
         int playerSpeed = 7;
 
-        int horizontalSpeed = 5;
-        int verticalSpeed = 3;
-        int speed = 0;
+        
 
-        int mob1Speed = 5;
-        int enemyTwoSpeed = 3;
+        int mob1Speed = 2;
         bool end = false;
-        bool music = false;
 
 
 
 
 
-
+        SoundPlayer music;
         public Form1()
         {
             InitializeComponent();
             Player.Top = 300;
+            music = new SoundPlayer(Properties.Resources.resu);
+            music.PlayLooping();
+
 
 
         }
@@ -50,9 +49,70 @@ namespace Project_Plateformer
         }
         private void collision(object sender, EventArgs e)
         {
-            foreach (Control x in this.Controls)
+            
+        }
+        private void deathMob(object sender, EventArgs e)
+        {
+            //si le bas du joueur touche le haut du mob alors le mob meurt sinon si il touche le mob sur le coté le joueur meurt 
+            
+        }
+
+        
+
+        private void deplacement()
+        {
+            if (goLeft == true)
+            {
+                Player.Left -= playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlcMirror;
+            }
+            if (goRight == true)
+            {
+                Player.Left += playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlc;
+            }
+            if (jumping == true && force < 0)
+            {
+                jumping = false;
+
+            }
+            if (jumping == true)
             {
                 
+                jumpSpeed = -8;
+                force -= 1;
+            }
+            else
+            {
+             
+                jumpSpeed = 10;
+            }
+        }
+
+
+
+
+        private void MainGameTimeEvent(object sender, EventArgs e)
+        {
+            
+            this.DoubleBuffered = true;
+            txtScore.Text = "Score: " + score;
+            // the player don't vibrate when he is on a plateform
+            
+            Player.Top += jumpSpeed;
+            // the player go down to the plateform
+            
+
+            
+            
+
+           
+
+
+            deplacement();
+            foreach (Control x in this.Controls)
+            {
+
                 if (x is PictureBox && (string)x.Tag == "Plateform")
 
                 {
@@ -60,12 +120,30 @@ namespace Project_Plateformer
                     {
                         if (x.Bounds.Y <= Player.Bounds.Y)
                         {
-                            Player.Top = x.Top + Player.Height;
+
+                            while (force > 0)
+                            {
+                                force -= 1;
+                                Player.Top = x.Top + Player.Height;
+                            }
+
+
                         }
-                        else if (Player.Bounds.Y <= x.Bounds.Y + Player.Bounds.Height)
+                        else if (Player.Bounds.Y <= x.Bounds.Y + Player.Bounds.Height && Player.Bounds.X + Player.Width >= x.Bounds.X + 8 && Player.Bounds.X <= x.Bounds.X + x.Width - 8)
                         {
                             force = 8;
-                            Player.Top = x.Top - Player.Height;
+                            if (!jumping)
+                            {
+                                jumpSpeed = 0;
+                            }
+                            else
+                            {
+                                jumpSpeed = -10;
+                            }
+
+                            Player.Top = x.Top - Player.Height+1;
+
+
                         }
 
                         if (x.Name == "END")
@@ -93,13 +171,13 @@ namespace Project_Plateformer
                         if (goLeft == true)
                         {
                             //si le joueur est au dessus le mur il peut marcher dessus
-                            
+
                             Player.Left = x.Left + x.Width;
                         }
                         else if (goRight == true)
                         {
                             //si le joueur est au dessus le mur il peut marcher dessus
-                     
+
                             Player.Left = x.Left - Player.Width;
                         }
                         else if (x.Bounds.Y <= Player.Bounds.Y)
@@ -118,7 +196,7 @@ namespace Project_Plateformer
                     }
                 }
 
-                if (x is PictureBox && x.Tag == "Coin")
+                if (x is PictureBox && (string)x.Tag == "Coin")
                 {
                     if (Player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
                     {
@@ -126,62 +204,9 @@ namespace Project_Plateformer
                         score++;
                     }
                 }
-                
-
-            }
-        }
-        private void deathMob(object sender, EventArgs e)
-        {
-            //si le bas du joueur touche le haut du mob alors le mob meurt sinon si il touche le mob sur le coté le joueur meurt 
-            
-        }
-
-        private void Music()
-        {
-            // import the music
-            
-            if (music == false)
-            {
-                SoundPlayer mus = new SoundPlayer(Properties.Resources.resu);
-                mus.PlayLooping();
-                music = true;
-            }
-        }
 
 
-        private void MainGameTimeEvent(object sender, EventArgs e)
-        {
-            
-            this.DoubleBuffered = true;
-            txtScore.Text = "Score: " + score;
-            Player.Top += jumpSpeed;
-            Music();
-            
-
-            if (goLeft == true)
-            {
-                Player.Left -= playerSpeed;
-                Player.BackgroundImage = Properties.Resources.vlcMirror;
             }
-            if (goRight == true)
-            {
-                Player.Left += playerSpeed;
-                Player.BackgroundImage = Properties.Resources.vlc;
-            }
-            if (jumping == true && force < 0)
-            {
-                jumping = false;
-            }
-            if (jumping == true)
-            {
-                jumpSpeed = -8;
-                force -= 1;
-            }
-            else
-            {
-                jumpSpeed = 10;
-            }
-            collision(sender,e);
 
             if (mob1 != null)
             {
@@ -214,7 +239,7 @@ namespace Project_Plateformer
 
             deathMob(sender, e);
             }
-            if (score == 4)
+            if (score == 3)
             {
                 removable.Visible = false;
                 removable.Tag = "";
@@ -245,7 +270,9 @@ namespace Project_Plateformer
 
         private void Player_Click(object sender, EventArgs e)
         {
-            // erase the white background of the player
+            // le joueur arrete de trembler quand il est sur une plateforme
+            
+
             
 
         }

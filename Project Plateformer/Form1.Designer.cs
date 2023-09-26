@@ -84,7 +84,7 @@
             // gameTime
             // 
             this.gameTime.Enabled = true;
-            this.gameTime.Interval = 20;
+            this.gameTime.Interval = 15;
             this.gameTime.Tick += new System.EventHandler(this.MainGameTimeEvent);
             // 
             // pictureBox9
@@ -196,7 +196,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(198, 311);
+            this.pictureBox2.Location = new System.Drawing.Point(152, 270);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(183, 30);
             this.pictureBox2.TabIndex = 2;
@@ -291,10 +291,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::Project_Plateformer.Properties.Resources.cave;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1135, 768);
+            this.ClientSize = new System.Drawing.Size(1135, 450);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox8);
