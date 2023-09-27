@@ -63,6 +63,16 @@ namespace Project_Plateformer.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amogus {
+            get {
+                object obj = ResourceManager.GetObject("amogus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cave {
             get {
                 object obj = ResourceManager.GetObject("cave", resourceCulture);
@@ -136,6 +146,16 @@ namespace Project_Plateformer.Properties {
         internal static System.IO.UnmanagedMemoryStream resu {
             get {
                 return ResourceManager.GetStream("resu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap super {
+            get {
+                object obj = ResourceManager.GetObject("super", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

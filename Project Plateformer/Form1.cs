@@ -35,6 +35,7 @@ namespace Project_Plateformer
         SoundPlayer music;
         public Form1()
         {
+            
             InitializeComponent();
             Player.Top = 300;
        
@@ -96,10 +97,8 @@ namespace Project_Plateformer
                             txtScore.Text = "Score: " + score + Environment.NewLine + "You Win";
                             
                              
-                            // switch to form 2
-                            Form2 form2 = new Form2();
-                            form2.Show();
-                            this.Hide();
+                            
+                            
 
 
                             
@@ -234,7 +233,7 @@ namespace Project_Plateformer
 
                 }
             }
-                deathMob();
+                
         }
 
 
@@ -245,10 +244,8 @@ namespace Project_Plateformer
             
             this.DoubleBuffered = true;
             txtScore.Text = "Score: " + score;
-            // the player don't vibrate when he is on a plateform
             
             Player.Top += jumpSpeed;
-            // the player go down to the plateform
             
 
             
@@ -260,7 +257,12 @@ namespace Project_Plateformer
             Deplacement();
             collision(sender, e);
             deplacementMob();
-            
+            if (mob1.Visible == true)
+            {
+                deathMob();
+            }
+           
+
 
 
 
@@ -332,6 +334,11 @@ namespace Project_Plateformer
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         public void keyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -381,6 +388,8 @@ namespace Project_Plateformer
         }
         public void restartGame()
         {
+            this.VerticalScroll.Value = 0;
+            txtScore.Top = 0;
             jumping = false;
             goLeft = false;
             goRight = false;
@@ -400,8 +409,10 @@ namespace Project_Plateformer
             Player.Top = 300;
 
             mob1.Left = 350;
+            mob1Speed = 2;
             mob1.Tag = "mob";
             gameTime.Start();
+            
 
 
         }
