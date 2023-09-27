@@ -45,11 +45,11 @@ namespace Project_Plateformer
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
 
         }
-        private void collision(object sender, EventArgs e)
+        public void collision(object sender, EventArgs e)
         {
             foreach (Control x in this.Controls)
             {
@@ -162,7 +162,7 @@ namespace Project_Plateformer
 
             }
         }
-        private void deathMob()
+        public void deathMob()
         {
             //si le bas du joueur touche le haut du mob alors le mob meurt sinon si il touche le mob sur le coté le joueur meurt 
             if (Player.Bounds.IntersectsWith(mob1.Bounds) && mob1.Visible == true)
@@ -189,7 +189,7 @@ namespace Project_Plateformer
 
         
 
-        private void Deplacement()
+        public void Deplacement()
         {
             if (goLeft == true)
             {
@@ -218,7 +218,7 @@ namespace Project_Plateformer
                 jumpSpeed = 10;
             }
         }
-        private void deplacementMob()
+        public void deplacementMob()
         {
             if (mob1.Visible != false)
             {
@@ -240,7 +240,7 @@ namespace Project_Plateformer
 
 
 
-        private void MainGameTimeEvent(object sender, EventArgs e)
+        public void MainGameTimeEvent(object sender, EventArgs e)
         {
             
             this.DoubleBuffered = true;
@@ -288,14 +288,14 @@ namespace Project_Plateformer
 
 
         }
-        
-        
-        private void pictureBox7_Click(object sender, EventArgs e)
+
+
+        public void pictureBox7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             // the screen scroll automatically when the player reach the bottom of the screen
             
@@ -303,7 +303,7 @@ namespace Project_Plateformer
 
         }
 
-        private void Plateform_Click(object sender, EventArgs e)
+        public void Plateform_Click(object sender, EventArgs e)
         {
          
         }
@@ -317,22 +317,22 @@ namespace Project_Plateformer
 
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        public void pictureBox10_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        public void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox15_Click(object sender, EventArgs e)
+        public void pictureBox15_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void keyIsDown(object sender, KeyEventArgs e)
+        public void keyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -356,7 +356,7 @@ namespace Project_Plateformer
 
 
 
-        private void keyIsUp(object sender, KeyEventArgs e)
+        public void keyIsUp(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Left)
@@ -379,7 +379,7 @@ namespace Project_Plateformer
 
 
         }
-        private void restartGame()
+        public void restartGame()
         {
             jumping = false;
             goLeft = false;
