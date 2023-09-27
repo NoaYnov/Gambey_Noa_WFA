@@ -18,3 +18,4 @@ C:\Users\Gambey\Documents\GitHub\Gambey_Noa_WFA\Project Plateformer\obj\Debug\Pr
 C:\Users\Gambey\Documents\GitHub\Gambey_Noa_WFA\Project Plateformer\obj\Debug\Project Plateformer.csproj.CoreCompileInputs.cache
 C:\Users\Gambey\Documents\GitHub\Gambey_Noa_WFA\Project Plateformer\obj\Debug\Project Plateformer.exe
 C:\Users\Gambey\Documents\GitHub\Gambey_Noa_WFA\Project Plateformer\obj\Debug\Project Plateformer.pdb
+C:\Users\Gambey\Documents\GitHub\Gambey_Noa_WFA\Project Plateformer\obj\Debug\Project_Plateformer.Form2.resources

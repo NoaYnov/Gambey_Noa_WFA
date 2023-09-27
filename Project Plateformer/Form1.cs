@@ -92,8 +92,21 @@ namespace Project_Plateformer
                             Console.WriteLine("END");
                             gameTime.Stop();
                             isGameOver = true;
-                            end = true;
+                           
                             txtScore.Text = "Score: " + score + Environment.NewLine + "You Win";
+                            
+                             
+                            // switch to form 2
+                            Form2 form2 = new Form2();
+                            form2.Show();
+                            this.Hide();
+
+
+                            
+
+
+
+                            
 
                         }
 
@@ -156,7 +169,7 @@ namespace Project_Plateformer
             {
                 if (Player.Bounds.Y + Player.Height <= mob1.Bounds.Y + 5)
                 {
-                    Debug.WriteLine("test1");
+                    
                     mob1.Visible = false;
                     mob1.Tag = "";
                     mob1Speed = 0;
@@ -166,7 +179,7 @@ namespace Project_Plateformer
                 }
                 else
                 {
-                    Debug.WriteLine("test2");
+                    
                     gameTime.Stop();
                     isGameOver = true;
                     txtScore.Text = "Score: " + score + Environment.NewLine + "You Lose";
@@ -176,7 +189,7 @@ namespace Project_Plateformer
 
         
 
-        private void deplacement()
+        private void Deplacement()
         {
             if (goLeft == true)
             {
@@ -244,7 +257,7 @@ namespace Project_Plateformer
            
 
 
-            deplacement();
+            Deplacement();
             collision(sender, e);
             deplacementMob();
             
@@ -374,11 +387,7 @@ namespace Project_Plateformer
             isGameOver = false;
             score = 0;
             txtScore.Text = "Score: " + score;
-            if (end == true)
-            {
-                // switch to the next level
-
-            }
+            
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && x.Visible == false)
@@ -386,7 +395,7 @@ namespace Project_Plateformer
                     x.Visible = true;
                 }
             }
-
+            
             Player.Left = 68;
             Player.Top = 300;
 
