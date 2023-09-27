@@ -148,7 +148,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Image = global::Project_Plateformer.Properties.Resources.coin;
             this.pictureBox6.Location = new System.Drawing.Point(623, 104);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 40);
@@ -160,7 +160,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Image = global::Project_Plateformer.Properties.Resources.coin;
             this.pictureBox5.Location = new System.Drawing.Point(689, 104);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 40);
@@ -183,7 +183,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::Project_Plateformer.Properties.Resources.coin;
             this.pictureBox3.Location = new System.Drawing.Point(556, 104);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 40);
@@ -221,7 +221,7 @@
             // mob1
             // 
             this.mob1.BackColor = System.Drawing.Color.Transparent;
-            this.mob1.Image = ((System.Drawing.Image)(resources.GetObject("mob1.Image")));
+            this.mob1.Image = global::Project_Plateformer.Properties.Resources.mob1;
             this.mob1.Location = new System.Drawing.Point(464, 213);
             this.mob1.Name = "mob1";
             this.mob1.Size = new System.Drawing.Size(36, 36);

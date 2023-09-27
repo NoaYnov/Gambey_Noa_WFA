@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\resu.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\mob1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\coin.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

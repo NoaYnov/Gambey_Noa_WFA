@@ -49,67 +49,6 @@ namespace Project_Plateformer
         }
         private void collision(object sender, EventArgs e)
         {
-            
-        }
-        private void deathMob(object sender, EventArgs e)
-        {
-            //si le bas du joueur touche le haut du mob alors le mob meurt sinon si il touche le mob sur le coté le joueur meurt 
-            
-        }
-
-        
-
-        private void deplacement()
-        {
-            if (goLeft == true)
-            {
-                Player.Left -= playerSpeed;
-                Player.BackgroundImage = Properties.Resources.vlcMirror;
-            }
-            if (goRight == true)
-            {
-                Player.Left += playerSpeed;
-                Player.BackgroundImage = Properties.Resources.vlc;
-            }
-            if (jumping == true && force < 0)
-            {
-                jumping = false;
-
-            }
-            if (jumping == true)
-            {
-                
-                jumpSpeed = -8;
-                force -= 1;
-            }
-            else
-            {
-             
-                jumpSpeed = 10;
-            }
-        }
-
-
-
-
-        private void MainGameTimeEvent(object sender, EventArgs e)
-        {
-            
-            this.DoubleBuffered = true;
-            txtScore.Text = "Score: " + score;
-            // the player don't vibrate when he is on a plateform
-            
-            Player.Top += jumpSpeed;
-            // the player go down to the plateform
-            
-
-            
-            
-
-           
-
-
-            deplacement();
             foreach (Control x in this.Controls)
             {
 
@@ -141,7 +80,7 @@ namespace Project_Plateformer
                                 jumpSpeed = -10;
                             }
 
-                            Player.Top = x.Top - Player.Height+1;
+                            Player.Top = x.Top - Player.Height + 1;
 
 
                         }
@@ -207,9 +146,66 @@ namespace Project_Plateformer
 
 
             }
-
-            if (mob1 != null)
+        }
+        private void deathMob()
+        {
+            //si le bas du joueur touche le haut du mob alors le mob meurt sinon si il touche le mob sur le coté le joueur meurt 
+            if (Player.Bounds.IntersectsWith(mob1.Bounds) && mob1.Visible == true)
             {
+                if (Player.Bounds.Y + Player.Height <= mob1.Bounds.Y + 5)
+                {
+                    mob1.Visible = false;
+                    mob1.Tag = "";
+                    mob1Speed = 0;
+                    jumpSpeed = -10;
+                    force = 8;
+                    score++;
+                }
+                else
+                {
+                    gameTime.Stop();
+                    isGameOver = true;
+                    txtScore.Text = "Score: " + score + Environment.NewLine + "You Lose";
+                }
+            }
+        }
+
+        
+
+        private void deplacement()
+        {
+            if (goLeft == true)
+            {
+                Player.Left -= playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlcMirror;
+            }
+            if (goRight == true)
+            {
+                Player.Left += playerSpeed;
+                Player.BackgroundImage = Properties.Resources.vlc;
+            }
+            if (jumping == true && force < 0)
+            {
+                jumping = false;
+
+            }
+            if (jumping == true)
+            {
+                
+                jumpSpeed = -8;
+                force -= 1;
+            }
+            else
+            {
+             
+                jumpSpeed = 10;
+            }
+        }
+        private void deplacementMob()
+        {
+            if (mob1.Visible != false)
+            {
+
                 mob1.Left -= mob1Speed;
 
                 if (mob1.Left < pictureBox1.Left || mob1.Left + mob1.Width > pictureBox1.Left + pictureBox2.Width)
@@ -221,8 +217,42 @@ namespace Project_Plateformer
 
                 }
             }
+        }
+
+
+
+
+        private void MainGameTimeEvent(object sender, EventArgs e)
+        {
+            
+            this.DoubleBuffered = true;
+            txtScore.Text = "Score: " + score;
+            // the player don't vibrate when he is on a plateform
+            
+            Player.Top += jumpSpeed;
+            // the player go down to the plateform
+            
+
             
             
+
+           
+
+
+            deplacement();
+            collision(sender, e);
+            deplacementMob();
+            if (mob1 != null)
+            {
+
+                deathMob();
+            }
+
+
+
+
+
+
             if (Player.Location.Y >= 400)
             {
 
@@ -234,12 +264,8 @@ namespace Project_Plateformer
                 
 
             }
-            if (mob1 != null)
-            {
-
-            deathMob(sender, e);
-            }
-            if (score == 3)
+            
+            if (score == 4)
             {
                 removable.Visible = false;
                 removable.Tag = "";
@@ -363,8 +389,9 @@ namespace Project_Plateformer
             Player.Left = 68;
             Player.Top = 300;
 
-            mob1.Left = 400;
+            mob1.Left = 350;
             mob1.Top = 170;
+            mob1.Tag = "mob";
             gameTime.Start();
 
 
