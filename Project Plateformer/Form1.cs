@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Diagnostics;
 
 namespace Project_Plateformer
 
@@ -36,6 +37,7 @@ namespace Project_Plateformer
         {
             InitializeComponent();
             Player.Top = 300;
+       
             music = new SoundPlayer(Properties.Resources.resu);
             music.PlayLooping();
 
@@ -154,6 +156,7 @@ namespace Project_Plateformer
             {
                 if (Player.Bounds.Y + Player.Height <= mob1.Bounds.Y + 5)
                 {
+                    Debug.WriteLine("test1");
                     mob1.Visible = false;
                     mob1.Tag = "";
                     mob1Speed = 0;
@@ -163,6 +166,7 @@ namespace Project_Plateformer
                 }
                 else
                 {
+                    Debug.WriteLine("test2");
                     gameTime.Stop();
                     isGameOver = true;
                     txtScore.Text = "Score: " + score + Environment.NewLine + "You Lose";
@@ -217,6 +221,7 @@ namespace Project_Plateformer
 
                 }
             }
+                deathMob();
         }
 
 
@@ -242,11 +247,7 @@ namespace Project_Plateformer
             deplacement();
             collision(sender, e);
             deplacementMob();
-            if (mob1 != null)
-            {
-
-                deathMob();
-            }
+            
 
 
 
@@ -390,7 +391,6 @@ namespace Project_Plateformer
             Player.Top = 300;
 
             mob1.Left = 350;
-            mob1.Top = 170;
             mob1.Tag = "mob";
             gameTime.Start();
 
