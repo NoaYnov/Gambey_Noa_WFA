@@ -1,10 +1,3 @@
-# Gambey_Noa_WFA
-
-## Description
-Il s'agit d'un plateformer classique dans un style mario 
-## Installation
-Pour installer le jeu il faut télécharger le fichier zip et l'extraire. Ensuite il faut lancer le fichier .exe
-
 ## Gestion de projet
 
 - Mercredi 20/09/23 : "Création du projet et du repository, création du personnage et de la map"
