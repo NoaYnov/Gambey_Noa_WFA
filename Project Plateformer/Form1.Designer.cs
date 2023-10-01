@@ -54,7 +54,6 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.mob2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mob2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -85,9 +83,10 @@
             this.txtScore.BackColor = System.Drawing.Color.Transparent;
             this.txtScore.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(933, 19);
+            this.txtScore.Location = new System.Drawing.Point(700, 15);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(135, 33);
+            this.txtScore.Size = new System.Drawing.Size(108, 26);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score: 0";
             this.txtScore.Click += new System.EventHandler(this.label1_Click);
@@ -102,9 +101,10 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.Location = new System.Drawing.Point(24, 60);
+            this.pictureBox9.Location = new System.Drawing.Point(18, 49);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(176, 30);
+            this.pictureBox9.Size = new System.Drawing.Size(132, 24);
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "Plateform";
@@ -114,9 +114,10 @@
             this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.BackgroundImage = global::Project_Plateformer.Properties.Resources.vlc;
             this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Player.Location = new System.Drawing.Point(55, 332);
+            this.Player.Location = new System.Drawing.Point(41, 270);
+            this.Player.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(34, 60);
+            this.Player.Size = new System.Drawing.Size(26, 49);
             this.Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Player.TabIndex = 4;
             this.Player.TabStop = false;
@@ -126,9 +127,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(382, 245);
+            this.pictureBox1.Location = new System.Drawing.Point(286, 199);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 24);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "Plateform";
@@ -137,9 +139,10 @@
             // 
             this.END.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.END.BackgroundImage = global::Project_Plateformer.Properties.Resources.Plateform__Personnalisé_;
-            this.END.Location = new System.Drawing.Point(29, 945);
+            this.END.Location = new System.Drawing.Point(22, 768);
+            this.END.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.END.Name = "END";
-            this.END.Size = new System.Drawing.Size(47, 33);
+            this.END.Size = new System.Drawing.Size(35, 27);
             this.END.TabIndex = 10;
             this.END.TabStop = false;
             this.END.Tag = "Plateform";
@@ -148,9 +151,10 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.Location = new System.Drawing.Point(763, 188);
+            this.pictureBox7.Location = new System.Drawing.Point(572, 153);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 242);
+            this.pictureBox7.Size = new System.Drawing.Size(27, 197);
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "Mur";
@@ -160,9 +164,10 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox6.Location = new System.Drawing.Point(640, 60);
+            this.pictureBox6.Location = new System.Drawing.Point(480, 49);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox6.Size = new System.Drawing.Size(26, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
@@ -172,9 +177,10 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox5.Location = new System.Drawing.Point(1009, 60);
+            this.pictureBox5.Location = new System.Drawing.Point(757, 49);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox5.Size = new System.Drawing.Size(26, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
@@ -184,9 +190,10 @@
             // 
             this.pm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pm2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pm2.BackgroundImage")));
-            this.pm2.Location = new System.Drawing.Point(556, 160);
+            this.pm2.Location = new System.Drawing.Point(417, 130);
+            this.pm2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pm2.Name = "pm2";
-            this.pm2.Size = new System.Drawing.Size(409, 30);
+            this.pm2.Size = new System.Drawing.Size(307, 24);
             this.pm2.TabIndex = 5;
             this.pm2.TabStop = false;
             this.pm2.Tag = "Plateform";
@@ -195,9 +202,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox3.Location = new System.Drawing.Point(556, 60);
+            this.pictureBox3.Location = new System.Drawing.Point(417, 49);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -207,9 +215,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(152, 270);
+            this.pictureBox2.Location = new System.Drawing.Point(114, 219);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(183, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(137, 24);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "Plateform";
@@ -219,9 +228,10 @@
             // 
             this.Plateform.BackColor = System.Drawing.Color.Transparent;
             this.Plateform.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Plateform.BackgroundImage")));
-            this.Plateform.Location = new System.Drawing.Point(29, 398);
+            this.Plateform.Location = new System.Drawing.Point(22, 323);
+            this.Plateform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Plateform.Name = "Plateform";
-            this.Plateform.Size = new System.Drawing.Size(734, 32);
+            this.Plateform.Size = new System.Drawing.Size(550, 26);
             this.Plateform.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Plateform.TabIndex = 1;
             this.Plateform.TabStop = false;
@@ -233,9 +243,10 @@
             // 
             this.mob1.BackColor = System.Drawing.Color.Transparent;
             this.mob1.Image = global::Project_Plateformer.Properties.Resources.mob1;
-            this.mob1.Location = new System.Drawing.Point(464, 213);
+            this.mob1.Location = new System.Drawing.Point(348, 173);
+            this.mob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mob1.Name = "mob1";
-            this.mob1.Size = new System.Drawing.Size(36, 36);
+            this.mob1.Size = new System.Drawing.Size(27, 29);
             this.mob1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.mob1.TabIndex = 8;
             this.mob1.TabStop = false;
@@ -247,9 +258,10 @@
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.BackgroundImage = global::Project_Plateformer.Properties.Resources.end1;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 675);
+            this.pictureBox10.Location = new System.Drawing.Point(2, 548);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(113, 303);
+            this.pictureBox10.Size = new System.Drawing.Size(85, 246);
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
@@ -258,9 +270,10 @@
             // 
             this.removable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.removable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("removable.BackgroundImage")));
-            this.removable.Location = new System.Drawing.Point(962, 160);
+            this.removable.Location = new System.Drawing.Point(722, 130);
+            this.removable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removable.Name = "removable";
-            this.removable.Size = new System.Drawing.Size(127, 30);
+            this.removable.Size = new System.Drawing.Size(95, 24);
             this.removable.TabIndex = 14;
             this.removable.TabStop = false;
             this.removable.Tag = "Plateform";
@@ -269,9 +282,10 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.Location = new System.Drawing.Point(-8, -14);
+            this.pictureBox11.Location = new System.Drawing.Point(-6, -11);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 992);
+            this.pictureBox11.Size = new System.Drawing.Size(27, 806);
             this.pictureBox11.TabIndex = 15;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Tag = "Mur";
@@ -280,9 +294,10 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
-            this.pictureBox12.Location = new System.Drawing.Point(1087, -2);
+            this.pictureBox12.Location = new System.Drawing.Point(815, -2);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(36, 980);
+            this.pictureBox12.Size = new System.Drawing.Size(27, 796);
             this.pictureBox12.TabIndex = 16;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Tag = "Mur";
@@ -291,9 +306,10 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.Location = new System.Drawing.Point(74, 945);
+            this.pictureBox8.Location = new System.Drawing.Point(56, 768);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(1016, 33);
+            this.pictureBox8.Size = new System.Drawing.Size(762, 27);
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "Plateform";
@@ -302,9 +318,10 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox13.Location = new System.Drawing.Point(939, 692);
+            this.pictureBox13.Location = new System.Drawing.Point(704, 562);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox13.Size = new System.Drawing.Size(26, 32);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 18;
             this.pictureBox13.TabStop = false;
@@ -314,9 +331,10 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox14.Location = new System.Drawing.Point(939, 547);
+            this.pictureBox14.Location = new System.Drawing.Point(704, 444);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox14.Size = new System.Drawing.Size(26, 32);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 19;
             this.pictureBox14.TabStop = false;
@@ -326,9 +344,10 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::Project_Plateformer.Properties.Resources.coin;
-            this.pictureBox15.Location = new System.Drawing.Point(939, 423);
+            this.pictureBox15.Location = new System.Drawing.Point(704, 344);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(34, 40);
+            this.pictureBox15.Size = new System.Drawing.Size(26, 32);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 20;
             this.pictureBox15.TabStop = false;
@@ -340,9 +359,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(44, 14);
+            this.label1.Location = new System.Drawing.Point(33, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 33);
+            this.label1.Size = new System.Drawing.Size(504, 26);
             this.label1.TabIndex = 21;
             this.label1.Text = "Atteindre l\'arrivé avec toutes les pieces";
             // 
@@ -350,34 +370,23 @@
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.pictureBox16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox16.BackgroundImage")));
-            this.pictureBox16.Location = new System.Drawing.Point(556, 188);
+            this.pictureBox16.Location = new System.Drawing.Point(417, 153);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(36, 87);
+            this.pictureBox16.Size = new System.Drawing.Size(27, 71);
             this.pictureBox16.TabIndex = 22;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Tag = "Mur";
             // 
-            // mob2
-            // 
-            this.mob2.BackColor = System.Drawing.Color.Transparent;
-            this.mob2.Image = global::Project_Plateformer.Properties.Resources.mob1;
-            this.mob2.Location = new System.Drawing.Point(638, 127);
-            this.mob2.Name = "mob2";
-            this.mob2.Size = new System.Drawing.Size(36, 36);
-            this.mob2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mob2.TabIndex = 23;
-            this.mob2.TabStop = false;
-            this.mob2.Tag = "mob";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::Project_Plateformer.Properties.Resources.cave;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1135, 511);
+            this.ClientSize = new System.Drawing.Size(851, 415);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.label1);
@@ -401,9 +410,9 @@
             this.Controls.Add(this.Plateform);
             this.Controls.Add(this.mob1);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.mob2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -431,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mob2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,7 +471,6 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox mob2;
     }
 }
 

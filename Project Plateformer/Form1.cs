@@ -178,7 +178,6 @@ namespace Project_Plateformer
         {
             if (Player.Bounds.IntersectsWith(mob1.Bounds) && mob1.Visible == true)
             {
-                Debug.WriteLine(mob2.Bounds.Y);
                 if (Player.Bounds.Y + Player.Height <= mob1.Bounds.Y + 5) // si le joueur est au dessus du mob il le tue
                 {
                     
@@ -198,26 +197,7 @@ namespace Project_Plateformer
                     txtScore.Text = "Score: " + score + Environment.NewLine + "You Lose";
                 }
             }
-            else if (Player.Bounds.IntersectsWith(mob2.Bounds) && mob2.Visible == true)
-            {
-                Debug.WriteLine(mob2.Bounds.Y);
-                if (Player.Bounds.Y + Player.Height <= mob2.Bounds.Y + 5) // si le joueur est au dessus du mob il le tue
-                {
-                    mob2.Visible = false;
-                    mob2.Tag = "";
-                    mob2Speed = 0;
-                    jumpSpeed = -10;
-                    force = 8;
-                    score++;
-                }
-                else // sinon il meurt et le jeu s'arrete
-                {
-
-                    gameTime.Stop();
-                    isGameOver = true;
-                    txtScore.Text = "Score: " + score + Environment.NewLine + "You Lose";
-                }
-            }
+            
         }
 
         
@@ -280,20 +260,7 @@ namespace Project_Plateformer
 
                 }
             }
-            if (mob2.Visible != false)
-            {
-
-                mob2.Left -= mob2Speed;
-
-                if (mob2.Left < pm2.Left || mob2.Left + mob2.Width > pm2.Left + pm2.Width)
-                {
-
-                    mob2Speed = -mob2Speed;
-
-
-
-                }
-            }
+            
 
         }
 
@@ -318,7 +285,7 @@ namespace Project_Plateformer
             Deplacement();
             collision();
             deplacementMob();
-            if (mob1.Visible == true || mob2.Visible == true)
+            if (mob1.Visible == true)
             {
                 deathMob();
             }
@@ -474,8 +441,6 @@ namespace Project_Plateformer
             mob1.Left = 350;
             mob1Speed = 2;
             mob1.Tag = "mob";
-            mob2Speed = 4;
-            mob2.Tag = "mob";
             gameTime.Start();
             
 
