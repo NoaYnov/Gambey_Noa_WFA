@@ -52,6 +52,27 @@ namespace Project_Plateformer
 
         }
 
-        
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+
+            frm.Player.BackgroundImage = Properties.Resources.vlc;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            frm.Player.BackgroundImage = Properties.Resources.amogus;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            frm.Player.BackgroundImage = Properties.Resources.super;
+            frm.Player.BackgroundImageLayout = ImageLayout.Stretch;
+        }
     }
 }
